@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel de administrador · UrbanStyle</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="/">URBAN<b>STYLE</b></a>
+  <span class="panel-tag">Panel de administrador</span>
+  <a class="ib" href="/" style="margin-left:auto">← Volver a la tienda</a>
+</header>
+
+<main class="wrap">
+  <div id="gate" class="gate">Verificando tu sesión…</div>
+
+  <div id="app" hidden>
+    <div class="flt" role="tablist">
+      <button class="chip on" id="t-prod" onclick="tab('prod')">Prendas</button>
+      <button class="chip" id="t-ord" onclick="tab('ord')">Pedidos</button>
+    </div>
+
+    <section id="p-prod" class="pane">
+      <div class="bar">
+        <div><h2>Prendas</h2><p class="sub" id="pcount"></p></div>
+        <button class="btn" onclick="openForm()">＋ Nueva prenda</button>
+      </div>
+      <div class="tbl-wrap"><table class="adm"><thead><tr><th></th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock por talla</th><th></th></tr></thead><tbody id="prows"></tbody></table></div>
+    </section>
+
+    <section id="p-ord" class="pane" hidden>
+      <div class="bar"><div><h2>Pedidos</h2><p class="sub">Compras simuladas registradas en la tienda (últimos 200).</p></div></div>
+      <div class="tbl-wrap"><table class="adm"><thead><tr><th>Código</th><th>Fecha</th><th>Cliente</th><th>Prendas</th><th>Pago</th><th>Total</th></tr></thead><tbody id="orows"></tbody></table></div>
+    </section>
+  </div>
+</main>
+
+<div id="modal"><div class="mb"><button class="x" onclick="closeM()" aria-label="Cerrar">×</button><div id="mc"></div></div></div>
+<div id="toast"></div>
+<script src="js/admin.js"></script>
+</body>
+</html>

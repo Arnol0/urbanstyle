@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UrbanStyle · Ropa urbana</title>
-  <meta name="description" content="Polos, hoodies, pantalones y accesorios urbanos." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UrbanStyle · Ropa urbana de edición limitada</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
-<body class="dark">
-  <header class="site-header">
-    <a href="/" class="brand">UrbanStyle</a>
-    <div id="account" class="account"></div>
-  </header>
+<body>
+<header class="top">
+  <a class="logo" href="#inicio">URBAN<b>STYLE</b></a>
+  <nav><a href="#inicio">Inicio</a><a href="#coleccion">Colección</a><a href="#tallas">Guía de tallas</a><a href="#sostenible">Sostenibilidad</a></nav>
+  <a class="ib" id="adm" href="admin.html" hidden>⚙️ Panel</a>
+  <button class="ib" id="bu" onclick="authM()">👤 Ingresar</button>
+  <button class="ib" onclick="toggleCart(1)">🛒 <span id="cc">0</span></button>
+</header>
+<main>
+<div class="view" id="v-inicio">
+  <div class="hero">
+    <h1>Ropa urbana de edición limitada, hecha en Lima.</h1>
+    <p>Colección cápsula con diseño propio, algodón peruano y tallas basadas en medidas reales en centímetros. Entrega en 24 a 48 horas.</p>
+    <a class="btn" href="#coleccion">Ver colección</a>
+    <p class="cph">Código de prueba: <b>URBAN10</b> (10 %) · Regístrate y obtén <b>BIENVENIDO</b> (15 %) + 100 puntos</p>
+    <div class="hg" id="hg"></div>
+  </div>
+  <section><h2>Compra por categoría</h2><p class="sub">Elige lo que buscas.</p><div class="tiles" id="tiles"></div></section>
+  <section><h2>Destacados</h2><p class="sub">Los favoritos de la colección.</p><div class="grid" id="feat"></div><p style="margin-top:20px"><a class="btn g" href="#coleccion">Ver toda la colección →</a></p></section>
+</div>
+<div class="view" id="v-coleccion"><section><div class="banner" id="bn-col"></div>
+  <h2>Colección cápsula</h2><p class="sub">Unidades limitadas por talla. Cuando se acaban, no vuelven.</p>
+  <div class="flt" id="flt"></div><div class="grid" id="grid"></div></section></div>
+<div class="view" id="v-tallas"><section><div class="banner" id="bn-tal"></div>
+  <h2>Guía de tallas (cm)</h2><p class="sub">Medidas reales de la prenda. Compárala con una prenda tuya antes de comprar.</p>
+  <b>Polos oversize</b><table><tr><th>Talla</th><th>Largo</th><th>Ancho</th><th>Hombros</th></tr><tr><td>S</td><td>70</td><td>56</td><td>52</td></tr><tr><td>M</td><td>72</td><td>58</td><td>54</td></tr><tr><td>L</td><td>74</td><td>60</td><td>56</td></tr><tr><td>XL</td><td>76</td><td>62</td><td>58</td></tr></table>
+  <b>Polerones y casacas</b><table><tr><th>Talla</th><th>Largo</th><th>Ancho</th><th>Hombros</th></tr><tr><td>S</td><td>66</td><td>58</td><td>54</td></tr><tr><td>M</td><td>68</td><td>60</td><td>56</td></tr><tr><td>L</td><td>70</td><td>62</td><td>58</td></tr><tr><td>XL</td><td>72</td><td>64</td><td>60</td></tr></table>
+  <b>Pantalones</b><table><tr><th>Talla</th><th>Largo</th><th>Cintura (en plano)</th><th>Cadera (en plano)</th></tr><tr><td>28</td><td>100</td><td>36</td><td>50</td></tr><tr><td>30</td><td>101</td><td>38</td><td>52</td></tr><tr><td>32</td><td>102</td><td>40</td><td>54</td></tr><tr><td>34</td><td>103</td><td>42</td><td>56</td></tr></table>
+  <b>Shorts</b><table><tr><th>Talla</th><th>Largo</th><th>Cintura (en plano)</th><th>Cadera (en plano)</th></tr><tr><td>S</td><td>44</td><td>36</td><td>50</td></tr><tr><td>M</td><td>46</td><td>38</td><td>52</td></tr><tr><td>L</td><td>48</td><td>40</td><td>54</td></tr><tr><td>XL</td><td>50</td><td>42</td><td>56</td></tr></table>
+  <small style="color:#6b6b6b">* Gorras: talla única ajustable. Medidas de ejemplo: reemplázalas por las reales del taller.</small></section></div>
+<div class="view" id="v-sostenible"><section>
+  <h2>Hecho con propósito</h2><p class="sub">Alineado al ODS 12: producción y consumo responsables.</p>
+  <div class="three">
+    <div class="box"><div class="si" id="si1"></div><h3>🌱 Empaque compostable</h3><p>Bolsa de almidón de maíz que se degrada en compost.</p></div>
+    <div class="box"><div class="si" id="si2"></div><h3>🧵 Producción local</h3><p>Lotes pequeños en talleres aliados de Gamarra, con control de calidad.</p></div>
+    <div class="box"><div class="si" id="si3"></div><h3>📱 Historia de tu prenda</h3><p>Escanea el QR de la etiqueta y conoce quién y dónde la hizo.</p></div>
+  </div></section></div>
+</main>
+<footer>© 2026 UrbanStyle · Prototipo MVP con fines académicos · Pagos simulados, no se realiza ningún cobro real.</footer>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <h1 class="headline">Ropa urbana para caminar la ciudad</h1>
-        <p class="hero-sub">Polos, hoodies, pantalones y accesorios con corte amplio y telas resistentes.</p>
-        <a href="#catalogo" class="btn-light">Ver catálogo</a>
-      </div>
-      <article id="featured" class="feature" hidden></article>
-    </div>
-  </section>
+<a class="wa" href="https://wa.me/51999999999?text=Hola%20UrbanStyle,%20tengo%20una%20consulta" target="_blank">💬 WhatsApp</a>
 
-  <main id="catalogo" class="catalog">
-    <div class="toolbar">
-      <h2 class="section-title">Catálogo <span id="count" class="count"></span></h2>
-      <nav class="filters" id="filters" aria-label="Categorías">
-        <button class="chip is-active" data-cat="">Todo</button>
-        <button class="chip" data-cat="polos">Polos</button>
-        <button class="chip" data-cat="pantalones">Pantalones</button>
-        <button class="chip" data-cat="accesorios">Accesorios</button>
-      </nav>
-    </div>
-    <p id="status" class="status" role="status"></p>
-    <section id="grid" class="grid"></section>
-  </main>
+<aside id="drawer">
+  <div class="dh"><b>Tu carrito</b><button class="x" style="position:static" onclick="toggleCart(0)">×</button></div>
+  <div id="ci"></div>
+  <div class="df" id="cf"></div>
+</aside>
+<div id="modal"><div class="mb"><button class="x" onclick="closeM()">×</button><div id="mc"></div></div></div>
+<div id="toast"></div>
 
-  <footer class="site-footer">© 2026 UrbanStyle</footer>
-
-  <script src="js/account.js"></script>
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

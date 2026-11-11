@@ -1,0 +1,29 @@
+NOMBRES DE LAS IMAGENES (guardalas en esta carpeta img/)
+Formatos aceptados: .jpg  .png  .webp  .jpeg  (escribe el nombre exactamente igual, en minusculas, sin espacios ni tildes)
+Si falta una foto, la tienda muestra un dibujo de respaldo. Recarga con Ctrl+F5 tras agregar fotos.
+
+PORTADA DEL INICIO (4 modelos, formato vertical 3:4)
+  portada1   portada2   portada3   portada4
+  (tambien se leen tus nombres anteriores: 2.jpg, 3.jpg, 4.jpg y Gemini_Generated_Image_d9d2mtd9d2mtd9d2.jpg)
+
+CATEGORIAS DEL INICIO (opcional; si no las pones usa el dibujo)
+  cat-polo   cat-poleron   cat-casaca   cat-pantalon   cat-short   cat-gorra
+
+PRENDAS (catalogo, inicio y carrito)
+  p01 Polo Oversize Lima Noche        p11 Casaca Bomber Oliva
+  p02 Polo Oversize Gamarra Arena     p12 Casaca Cortaviento Negra
+  p03 Polo Oversize Costa Verde       p13 Pantalon Cargo Negro
+  p04 Polo Grafico Barranco           p14 Pantalon Cargo Arena
+  p05 Polo Boxy Miraflores            p15 Pantalon Jogger Gris
+  p06 Polo Basico Hueso               p16 Pantalon Wide Leg Denim
+  p07 Polo Rayas Callao               p17 Short Cargo Oliva
+  p08 Poleron Urbano Grafito          p18 Short Deportivo Negro
+  p09 Poleron Capucha Arena           p19 Gorra Dad Hat Negra
+  p10 Poleron Vino Rimac              p20 Gorra Trucker Arena
+
+BANNERS (opcionales; si no existen, no se muestran)
+  banner-coleccion   (cabecera de Coleccion, horizontal)
+  banner-tallas      (cabecera de Guia de tallas, horizontal)
+  sostenible1  sostenible2  sostenible3   (fotos de las 3 tarjetas de Sostenibilidad)
+
+Ejemplo: img/p01.jpg, img/portada1.png

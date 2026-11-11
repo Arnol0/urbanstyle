@@ -13,7 +13,7 @@ const pool = require('../config/db');
   try {
     const sql = fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8');
     await pool.query(sql);
-    console.log('Tablas listas: products y users');
+    console.log('Tablas listas: products, users, images, orders y order_items');
   } catch (err) {
     console.error('Error al crear las tablas:', err.message);
     process.exitCode = 1;

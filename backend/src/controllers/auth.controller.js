@@ -10,7 +10,7 @@ const COOKIE = {
   secure: process.env.NODE_ENV === 'production',
 };
 
-const publicUser = (u) => ({ id: u.id, name: u.name, email: u.email, picture: u.picture });
+const publicUser = require('../utils/publicUser');
 
 function startSession(res, user) {
   const token = jwt.sign({ sub: user.id }, process.env.JWT_SECRET, { expiresIn: '7d' });
@@ -32,7 +32,7 @@ exports.register = async (req, res) => {
   try {
     const hash = await bcrypt.hash(password, 10);
     const { rows } = await pool.query(
-      'INSERT INTO users (name, email, password_hash) VALUES ($1, $2, $3) RETURNING *',
+      'INSERT INTO users (name, email, password_hash, points) VALUES ($1, $2, $3, 100) RETURNING *',
       [name, email, hash]
     );
     startSession(res, rows[0]);
@@ -86,7 +86,7 @@ exports.google = async (req, res) => {
 
     if (!user) {
       const ins = await pool.query(
-        'INSERT INTO users (name, email, google_id, picture) VALUES ($1, $2, $3, $4) RETURNING *',
+        'INSERT INTO users (name, email, google_id, picture, points) VALUES ($1, $2, $3, $4, 100) RETURNING *',
         [p.name || email.split('@')[0], email, p.sub, p.picture || null]
       );
       user = ins.rows[0];
