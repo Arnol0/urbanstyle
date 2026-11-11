@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrar · UrbanStyle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="bg-concrete text-ink">
+  <header class="px-6 py-5 border-b-2 border-ink">
+    <a href="/" class="brand">UrbanStyle</a>
+  </header>
+
+  <main class="auth-card">
+    <div class="flex gap-2 mb-6" role="tablist">
+      <button class="chip is-active" data-mode="login" role="tab">Entrar</button>
+      <button class="chip" data-mode="register" role="tab">Crear cuenta</button>
+    </div>
+
+    <form id="login-form" class="auth-form">
+      <label class="field">Correo
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label class="field">Contraseña
+        <input type="password" name="password" autocomplete="current-password" required />
+      </label>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+
+    <form id="register-form" class="auth-form" hidden>
+      <label class="field">Nombre
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
+      <label class="field">Correo
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
+      <label class="field">Contraseña (mínimo 8 caracteres)
+        <input type="password" name="password" autocomplete="new-password" minlength="8" required />
+      </label>
+      <button class="btn" type="submit">Crear cuenta</button>
+    </form>
+
+    <p id="error" class="auth-error" role="alert"></p>
+
+    <div id="google-wrap" class="mt-6 pt-6 border-t-2 border-ink">
+      <div id="google-btn"></div>
+    </div>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
