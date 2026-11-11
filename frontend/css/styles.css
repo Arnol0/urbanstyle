@@ -70,3 +70,22 @@ a.chip { text-decoration: none; display: inline-block; }
 .btn:hover { background: var(--signal); border-color: var(--signal); }
 .btn:disabled { opacity: .5; cursor: wait; }
 .auth-error { color: #B00020; font-weight: 600; min-height: 1.5rem; margin-top: 1rem; }
+
+/* Tema oscuro (página principal) */
+:root { --orange: #FF5B2E; --yellow: #F2C94C; --stone: #CFCFC8; }
+.dark { background: var(--ink); color: var(--concrete); }
+.dark .site-header, .dark .site-footer { border-color: var(--concrete); }
+.dark .brand { color: var(--concrete); }
+.dark .chip { border-color: var(--concrete); color: var(--concrete); }
+.dark .chip.is-active, .dark .chip:hover { background: var(--concrete); color: var(--ink); }
+.dark .count, .dark .site-footer { color: #A8A8A8; }
+.dark .feature { background: var(--concrete); }
+.feature-media { background: var(--orange); }
+.dark .card { background: var(--concrete); color: var(--ink); border-color: var(--concrete); }
+.dark .card:hover { box-shadow: 5px 5px 0 var(--signal); }
+.ph { background: transparent; }
+.card-media { background: var(--stone); }
+.card:nth-child(4n+1) .card-media { background: var(--signal); }
+.card:nth-child(4n+2) .card-media { background: var(--orange); }
+.card:nth-child(4n+3) .card-media { background: var(--yellow); }
+.card:nth-child(4n) .card-media { background: var(--stone); }

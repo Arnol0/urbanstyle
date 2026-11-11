@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Polo boxy gris cemento">
+  <path d="M130 100 L55 150 L85 215 L120 190 L120 400 L280 400 L280 190 L315 215 L345 150 L270 100 C255 125 225 135 200 135 C175 135 145 125 130 100 Z" fill="#8F8F8F"/>
+  <path d="M120 386 L280 386" stroke="#767676" stroke-width="3"/>
+  <path d="M60 158 L89 212 M340 158 L311 212" stroke="#767676" stroke-width="3"/>
+  <path d="M135 98 L176 90 L200 132 L166 152 Z M265 98 L224 90 L200 132 L234 152 Z" fill="#A9A9A9" stroke="#6E6E6E" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="192" y="132" width="16" height="72" fill="none" stroke="#6E6E6E" stroke-width="2"/>
+  <circle cx="200" cy="152" r="4" fill="#5A5A5A"/>
+  <circle cx="200" cy="178" r="4" fill="#5A5A5A"/>
+</svg>

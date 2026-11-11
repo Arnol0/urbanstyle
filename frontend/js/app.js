@@ -57,7 +57,9 @@ function renderFeatured(p) {
   if (!p) return;
   const body = el('div', 'feature-body');
   body.append(el('h2', 'feature-name', p.name), el('p', 'card-price', money(p.price)));
-  featuredEl.replaceChildren(el('p', 'feature-label', 'Lo más nuevo'), media(p, 'feature-img', true), body);
+  const fm = el('div', 'feature-media');
+  fm.append(media(p, 'feature-img', true));
+  featuredEl.replaceChildren(el('p', 'feature-label', 'Lo más nuevo'), fm, body);
   featuredEl.hidden = false;
 }
 

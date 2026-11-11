@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Gorra dad hat">
+  <g transform="translate(-38 -5) scale(1.05)">
+    <path d="M95 300 C95 190 140 130 200 130 C260 130 305 190 305 300 Z" fill="#E9E6DD"/>
+    <path d="M200 134 C172 190 162 250 166 300 M200 134 C228 190 238 250 234 300" stroke="#C9C5B6" stroke-width="3" fill="none"/>
+    <path d="M85 300 L305 300 C360 305 395 330 395 340 C350 350 300 345 85 335 Z" fill="#CFCBBE"/>
+    <path d="M95 300 L305 300" stroke="#BDB8A8" stroke-width="3"/>
+    <circle cx="200" cy="132" r="8" fill="#CFCBBE"/>
+  </g>
+</svg>

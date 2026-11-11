@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Hoodie oversize negro">
+  <path d="M125 120 L60 170 L35 340 L85 350 L112 250 L112 410 L288 410 L288 250 L315 350 L365 340 L340 170 L275 120 Z" fill="#1C1C1C"/>
+  <path d="M140 125 C140 70 175 48 200 48 C225 48 260 70 260 125 C245 152 155 152 140 125 Z" fill="#262626"/>
+  <path d="M165 120 C165 86 185 68 200 68 C215 68 235 86 235 120 C225 138 175 138 165 120 Z" fill="#0A0A0A"/>
+  <path d="M185 138 L182 215 M215 138 L218 215" stroke="#EDEDED" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M138 335 L262 335 L276 410 L124 410 Z" fill="#242424" stroke="#3A3A3A" stroke-width="2"/>
+  <path d="M35 340 L85 350 L82 374 L31 364 Z M365 340 L315 350 L318 374 L369 364 Z" fill="#2C2C2C"/>
+  <rect x="112" y="392" width="176" height="18" fill="#2C2C2C"/>
+  <path d="M125 120 L114 250 M275 120 L286 250" stroke="#3A3A3A" stroke-width="2" fill="none"/>
+</svg>

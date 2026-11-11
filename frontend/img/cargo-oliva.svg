@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Cargo pants verde oliva">
+  <path d="M130 60 L270 60 L285 160 L300 440 L215 440 L200 190 L185 440 L100 440 L115 160 Z" fill="#5C6B3B"/>
+  <path d="M130 60 L270 60 L271 84 L129 84 Z" fill="#4A572F"/>
+  <rect x="150" y="58" width="8" height="28" fill="#3F4A28"/>
+  <rect x="196" y="58" width="8" height="28" fill="#3F4A28"/>
+  <rect x="242" y="58" width="8" height="28" fill="#3F4A28"/>
+  <path d="M200 84 L200 190" stroke="#3F4A28" stroke-width="3"/>
+  <path d="M104 235 L150 230 L152 320 L106 326 Z M296 235 L250 230 L248 320 L294 326 Z" fill="#6B7C45" stroke="#3F4A28" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M104 258 L151 253 M296 258 L249 253" stroke="#3F4A28" stroke-width="3"/>
+  <path d="M101 426 L186 426 M214 426 L299 426" stroke="#3F4A28" stroke-width="4"/>
+</svg>
