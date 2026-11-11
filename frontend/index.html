@@ -3,30 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UrbanStyle</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>UrbanStyle · Ropa urbana</title>
+  <meta name="description" content="Polos, hoodies, pantalones y accesorios urbanos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-concrete text-ink">
-  <header class="px-6 py-5 flex flex-wrap gap-3 items-center justify-between border-b-2 border-ink">
+<body>
+  <header class="site-header">
     <a href="/" class="brand">UrbanStyle</a>
-    <nav class="flex flex-wrap gap-2" id="filters" aria-label="Categorías">
-      <button class="chip is-active" data-cat="">Todo</button>
-      <button class="chip" data-cat="polos">Polos</button>
-      <button class="chip" data-cat="pantalones">Pantalones</button>
-      <button class="chip" data-cat="accesorios">Accesorios</button>
-    </nav>
-    <div id="account" class="flex items-center gap-2"></div>
+    <div id="account" class="account"></div>
   </header>
 
-  <main class="px-6 py-10 max-w-6xl mx-auto">
-    <h1 class="headline">Ropa urbana para todos los días</h1>
-    <p id="status" class="mt-6 text-sm" role="status"></p>
-    <section id="grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8"></section>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1 class="headline">Ropa urbana para caminar la ciudad</h1>
+        <p class="hero-sub">Polos, hoodies, pantalones y accesorios con corte amplio y telas resistentes.</p>
+        <a href="#catalogo" class="btn-light">Ver catálogo</a>
+      </div>
+      <article id="featured" class="feature" hidden></article>
+    </div>
+  </section>
+
+  <main id="catalogo" class="catalog">
+    <div class="toolbar">
+      <h2 class="section-title">Catálogo <span id="count" class="count"></span></h2>
+      <nav class="filters" id="filters" aria-label="Categorías">
+        <button class="chip is-active" data-cat="">Todo</button>
+        <button class="chip" data-cat="polos">Polos</button>
+        <button class="chip" data-cat="pantalones">Pantalones</button>
+        <button class="chip" data-cat="accesorios">Accesorios</button>
+      </nav>
+    </div>
+    <p id="status" class="status" role="status"></p>
+    <section id="grid" class="grid"></section>
   </main>
+
+  <footer class="site-footer">© 2026 UrbanStyle</footer>
 
   <script src="js/account.js"></script>
   <script src="js/app.js"></script>
